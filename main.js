@@ -1,4 +1,4 @@
-/*const userAgent = navigator.userAgent;
+const userAgent = navigator.userAgent;
 const cover = document.getElementById("cover")
 
 if (userAgent.match(/Android/i)) {
@@ -14,4 +14,3 @@ if (userAgent.match(/Android/i)) {
 } else {
     console.log("Device type is unknown or not detected");
 }
-*/
