@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/iconsProperties.css" />
+    <title>Untitled script writing web app (Uswwp)</title>
+</head>
+
+<body>
+
+    <div class="toolbar">
+        <span class="app-title">USWWP</span>
+        <div class="dropdown file">
+            <span>File</span>
+            <div class="dropdown-content">
+                <a href="#" onclick="newFile()">New</a>
+                <a href="#" onclick="save()">Save</a>
+                <a href="#" onclick="openFile()">Open</a>
+            </div>
+        </div>
+        <button id="boldButton">
+            <span class="material-symbols-outlined">
+                format_bold
+            </span>
+        </button>
+        <button id="italicButton">
+            <span class="material-symbols-outlined">
+                format_italic
+            </span>
+        </button>
+        <button id="underlineButton">
+            <span class="material-symbols-outlined">
+                format_underlined
+            </span>
+        </button>
+        <button id="orderedListButton">
+            <span class="material-symbols-outlined">
+                format_list_numbered
+            </span>
+        </button>
+        <button id="unorderedListButton">
+            <span class="material-symbols-outlined">
+                format_list_bulleted
+            </span>
+        </button>
+        <button id="alignLeftButton">
+            <span class="material-symbols-outlined">
+                format_align_left
+            </span>
+        </button>
+        <button id="alignCenterButton">
+            <span class="material-symbols-outlined">
+                format_align_center
+            </span>
+        </button>
+        <button id="alignRightButton">
+            <span class="material-symbols-outlined">
+                format_align_right
+            </span>
+        </button>
+        <button id="undoButton">
+            <span class="material-symbols-outlined">
+                undo
+            </span>
+        </button>
+        <button id="redoButton">
+            <span class="material-symbols-outlined">
+                redo
+            </span>
+        </button>
+        <button id="titleButton">
+            <span class="material-symbols-outlined">
+                title
+            </span>
+        </button>
+        <button id="textButton">
+            <span class="material-symbols-outlined">
+                format_paragraph
+            </span>
+        </button>
+        <button onclick="openHtml()">
+            <span class="material-symbols-outlined">
+                mimo
+                </span>
+        </button>
+    </div>
+
+    <div id="editor" class="textField" contenteditable="true">
+        <p>
+            Change me!
+            <b>This is bold</b>
+            <i>This is italic</i>
+        </p>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.0.3/pako.min.js"></script>
+    <script src="toolbarHandle.js"></script>
+    <script src="fileHandler.js"></script>
+</body>
+
+</html>
