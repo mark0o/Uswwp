@@ -56,15 +56,15 @@ function openFile() {
   });
 }
 
-function newFile(){
-    if (confirm('Are you sure you want to create a new file?')) {
-        var elmnt = document.getElementById("editor");
-        replaceElementHTML(elmnt, "<p></p>");
-      }
+function newFile() {
+  if (confirm("Are you sure you want to create a new file?")) {
+    var elmnt = document.getElementById("editor");
+    replaceElementHTML(elmnt, "<p></p>");
+  }
 }
 
 function openHtml() {
-  text = document.getElementById("editor").innerHTML
+  text = document.getElementById("editor").innerHTML;
   const html = `
   <!DOCTYPE html>
 <html lang="en">
@@ -141,10 +141,15 @@ function openHtml() {
     </style>
 </body>
 </html>
-  `
-
-  // Open a new tab and write the HTML content
-  var newTab = window.open();
-  newTab.document.write(html);
-  newTab.document.close();
+  `;
+    const height = screen.height;
+    const width = screen.width;
+    const features = `width=${width},height=${height},resizable=yes,scrollbars=yes`;
+    let newWindow = window.open("", "_blank", features);
+    if (newWindow) {
+      newWindow.document.write(html);
+      newWindow.document.close();
+    } else {
+      alert("Unable to open a new window. Please check your browser settings.");
+    }
 }

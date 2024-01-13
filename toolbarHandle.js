@@ -39,6 +39,7 @@ const alignLeftButton = document.getElementById('alignLeftButton');
 const alignFullButton = document.getElementById('alignFullButton');
 const titleButton = document.getElementById('titleButton');
 const textButton = document.getElementById('textButton');
+const themeButton = document.getElementById('themeButton');
 
 function performAction(command, range) {
   document.execCommand(command, false, null);
@@ -130,4 +131,18 @@ textButton.addEventListener("click", function () {
     const selection = saveSelection();
   setTitle("p");
   restoreSelection(selection);
+});
+
+themeButton.addEventListener("click", function () {
+  const current = themeButton.innerHTML
+  const body = document.querySelector("body")
+  if(current === "light_mode"){
+    themeButton.innerHTML = "dark_mode"
+    body.style.backgroundColor = "var(--background-colour-main-dark)";
+    body.style.color = "#fff";  
+  } else{
+    themeButton.innerHTML = "light_mode"   
+    body.style.backgroundColor = "var(--background-colour-main)";  
+    body.style.color = "#000";  
+  }
 });
