@@ -16,4 +16,6 @@ if (userAgent.match(/Android/i)) {
     cover.style.visibility = "hidden"
 } else {
     console.log("Device type is unknown or not detected");
+    cover.style.visibility = "visible"
+    body.style.overflow = "hidden"
 }
