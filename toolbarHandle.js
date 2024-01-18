@@ -160,7 +160,7 @@ function openHtml() {
     </head>
   
   <body>
-    <script>const speed = prompt("Please enter the spped:");</script>
+    <script>const speed = prompt("Please enter the speed number (the smaller the number the faster):");</script>
     <span>You can press the spacebar to pause and continue scrolling. credits to <a
         href="https://codepen.io/startupsandcode/pen/MmXWaO">John Mann</a> for making this</span>
     <div class="container">
